@@ -18197,6 +18197,10 @@ form .checkbox-container input:checked ~ .checkmark::before {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.border-201E21 {
+  border-bottom: 1px solid rgba(32, 30, 33, 0.1);
+}
+
 .social-icon-content .social-bg {
   height: 45px;
   width: 45px;
@@ -18224,6 +18228,10 @@ form .checkbox-container input:checked ~ .checkmark::before {
 
 .location-section .location-img iframe {
   height: 696px;
+}
+
+.news-open-section .left-content .black-arrow {
+  width: 6px;
 }
 
 /*# sourceMappingURL=main.css.map */

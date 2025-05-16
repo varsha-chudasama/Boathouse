@@ -10,6 +10,7 @@ import { Parts } from './parts/parts.js'
 import { Truncate } from './parts/truncate.js';
 import { Accordion } from './parts/accordion.js';
 import { Privacy } from './parts/privacy.js';
+import { Video } from './parts/video.js';
 
 
 // export for others scripts to use
@@ -44,6 +45,9 @@ $(function () {
 
   window.privacy = new Privacy();
   window.privacy.init();
+
+  window.video = new Video();
+  window.video.init();
 });
 
 // ===========================================================================

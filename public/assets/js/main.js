@@ -20563,7 +20563,240 @@ var Privacy = /*#__PURE__*/function () {
     }
   }]);
 }();
+;// ./src/js/parts/video.js
+function video_typeof(o) { "@babel/helpers - typeof"; return video_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, video_typeof(o); }
+function video_classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function video_defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, video_toPropertyKey(o.key), o); } }
+function video_createClass(e, r, t) { return r && video_defineProperties(e.prototype, r), t && video_defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function video_toPropertyKey(t) { var i = video_toPrimitive(t, "string"); return "symbol" == video_typeof(i) ? i : i + ""; }
+function video_toPrimitive(t, r) { if ("object" != video_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != video_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var Video = /*#__PURE__*/function () {
+  function Video() {
+    video_classCallCheck(this, Video);
+  }
+  return video_createClass(Video, [{
+    key: "init",
+    value: function init() {
+      this.Video();
+      this.Vimeo();
+      this.Youtube();
+    }
+  }, {
+    key: "Video",
+    value: function Video() {
+      $(document).ready(function () {
+        // Play specific video and pause all others
+        $(document).on('click', '.play-video-modal', function () {
+          var $clickedVideo = $(this).closest('.video-container').find('.myVideo');
+
+          // Pause all videos
+          $('.myVideo').each(function () {
+            this.pause();
+            $(this).closest('.video-container').find('.play-video-modal').removeClass('d-none');
+            $(this).closest('.video-container').find('.play-video-preview').removeClass('d-none');
+          });
+
+          // Play clicked video
+          if ($clickedVideo.length) {
+            $clickedVideo.get(0).play();
+          }
+          $(this).addClass('d-none');
+          $(this).closest('.video-container').find('.play-video-preview').addClass('d-none');
+        });
+
+        // Close video modal and pause the video
+        $(document).on('click', '.close-video-modal', function () {
+          var $video = $(this).closest('.video-container').find('.myVideo');
+          if ($video.length) {
+            $video.get(0).pause();
+          }
+          $(this).closest('.video-container').find('.play-video-modal').removeClass('d-none');
+          $(this).closest('.video-container').find('.play-video-preview').removeClass('d-none');
+        });
+
+        // Play banner video
+        $("#play-banner-video").click(function () {
+          var $bannerVideo = $("#banner-video");
+
+          // Pause all other videos
+          $('.myVideo').each(function () {
+            this.pause();
+            $(this).closest('.video-container').find('.play-video-modal').removeClass('d-none');
+            $(this).closest('.video-container').find('.play-video-preview').removeClass('d-none');
+          });
+          $bannerVideo.get(0).play();
+          $(this).addClass('d-none');
+          $(".video-img-play, .image-section-img, .banner-img").addClass('video-img-pause');
+          $(".video-preview").addClass('d-none');
+        });
+
+        // Pause banner video
+        $("#pause-banner-video").click(function () {
+          var $bannerVideo = $("#banner-video");
+          $bannerVideo.get(0).pause();
+          $("#play-banner-video").removeClass('d-none');
+          $(".video-img-play, .image-section-img, .banner-img").removeClass('video-img-pause');
+          $(".video-preview").removeClass('d-none');
+        });
+
+        // Handle play/pause for iframe banner video
+        $("#play-banner-iframe").click(function () {
+          $(this).toggleClass('d-none');
+        });
+      });
+    }
+  }, {
+    key: "Vimeo",
+    value: function Vimeo() {
+      document.querySelectorAll('.vimeo-video-iframe').forEach(function (container) {
+        var playButton = container.querySelector('.play-vimeo-btn');
+        var pauseButton = container.querySelector('.pause-vimeo-btn');
+        var vimeoFrame = container.querySelector('.vimeo-frame');
+        var coverImages = container.querySelector('.cover-images');
+        var videoId = container.getAttribute('data-video-id');
+        var iframe = null;
+
+        // Play button event listener
+        playButton.addEventListener('click', function () {
+          // Pause all other Vimeo videos
+          document.querySelectorAll('.vimeo-video-iframe').forEach(function (otherContainer) {
+            if (otherContainer !== container && otherContainer.querySelector('iframe')) {
+              var otherIframe = otherContainer.querySelector('iframe');
+              otherIframe.parentNode.removeChild(otherIframe);
+              otherContainer.querySelector('.play-vimeo-btn').classList.remove('d-none');
+              otherContainer.querySelector('.pause-vimeo-btn').classList.add('d-none');
+              otherContainer.querySelector('.cover-images').classList.remove('d-none');
+            }
+          });
+          if (!iframe) {
+            iframe = document.createElement('iframe');
+            iframe.src = "https://player.vimeo.com/video/".concat(videoId, "?autoplay=1&controls=0");
+            iframe.frameBorder = 0;
+            iframe.allow = 'autoplay;';
+            iframe.allowFullscreen = true;
+            vimeoFrame.appendChild(iframe);
+            playButton.classList.add('d-none');
+            coverImages.classList.add('d-none');
+            pauseButton.classList.remove('d-none');
+          }
+        });
+
+        // Pause button event listener
+        pauseButton.addEventListener('click', function () {
+          if (iframe) {
+            iframe.parentNode.removeChild(iframe);
+            iframe = null;
+            playButton.classList.remove('d-none');
+            pauseButton.classList.add('d-none');
+            coverImages.classList.remove('d-none');
+          }
+        });
+
+        // Auto-pause when the mouse leaves the container
+        container.addEventListener('mouseleave', function () {
+          if (iframe) {
+            iframe.parentNode.removeChild(iframe);
+            iframe = null;
+            playButton.classList.remove('d-none');
+            pauseButton.classList.add('d-none');
+            coverImages.classList.remove('d-none');
+          }
+        });
+      });
+    }
+  }, {
+    key: "Youtube",
+    value: function Youtube() {
+      var currentPlayer = null;
+      var currentPlayingModule = null;
+      function initializeYouTubeAPIAndPlayers() {
+        if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
+          var tag = document.createElement('script');
+          tag.src = "https://www.youtube.com/iframe_api";
+          document.body.appendChild(tag);
+          window.onYouTubeIframeAPIReady = function () {
+            initializeVideoModules();
+          };
+        } else {
+          initializeVideoModules();
+        }
+      }
+      function initializeVideoModules() {
+        document.querySelectorAll('.video').forEach(function (videoModule) {
+          // Ensure that the module is initialized only once
+          if (!videoModule.classList.contains('initialized')) {
+            initializeVideoModule(videoModule);
+            videoModule.classList.add('initialized');
+          }
+        });
+      }
+      function initializeVideoModule(videoModule) {
+        var pauseButton = document.getElementById('modal-youtube-pause');
+        var placeholder = videoModule.querySelector('.video-placeholder');
+        var player = new YT.Player(placeholder, {
+          videoId: videoModule.dataset.videoId,
+          playerVars: {
+            'controls': 0,
+            'rel': 0,
+            'modestbranding': 1,
+            'iv_load_policy': 3
+          },
+          events: {
+            onStateChange: function onStateChange(event) {
+              if (event.data === YT.PlayerState.ENDED) {
+                videoModule.classList.remove('playing');
+                player.destroy();
+                placeholder.innerHTML = ''; // Clear placeholder content
+                initializeVideoModule(videoModule); // Re-initialize video module
+              } else if (event.data === YT.PlayerState.PLAYING) {
+                if (currentPlayer && currentPlayer !== player) {
+                  currentPlayer.pauseVideo();
+                  if (currentPlayingModule) {
+                    currentPlayingModule.classList.remove('playing');
+                  }
+                }
+                currentPlayer = player;
+                currentPlayingModule = videoModule;
+                videoModule.classList.add('playing');
+              }
+            }
+          }
+        });
+        var playButton = videoModule.querySelector('.play-iframe-btn');
+        if (playButton) {
+          playButton.addEventListener('click', function () {
+            player.playVideo();
+            playButton.classList.add('d-none');
+          });
+        }
+        videoModule.addEventListener('mouseleave', function () {
+          playButton.classList.remove('d-none');
+          if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+            player.pauseVideo();
+            videoModule.classList.remove('playing');
+            if (currentPlayer === player) {
+              currentPlayer = null;
+              currentPlayingModule = null;
+            }
+          }
+        });
+        if (pauseButton) {
+          pauseButton.addEventListener('click', function () {
+            player.pauseVideo();
+            videoModule.classList.remove('playing');
+            if (currentPlayer === player) {
+              currentPlayer = null;
+              currentPlayingModule = null;
+            }
+          });
+        }
+      }
+      initializeYouTubeAPIAndPlayers();
+    }
+  }]);
+}();
 ;// ./src/js/main.js
+
 
 
 
@@ -20600,6 +20833,8 @@ jquery_default()(function () {
   window.accordion.init();
   window.privacy = new Privacy();
   window.privacy.init();
+  window.video = new Video();
+  window.video.init();
 });
 
 // ===========================================================================
