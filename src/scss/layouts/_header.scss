@@ -1,0 +1,62 @@
+.header {
+    .menu-icon {
+        height: 48px;
+        width: fit-content;
+
+        @include media-breakpoint-down(md) {
+            height: 30px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            &:focus-visible {
+                outline: none !important;
+            }
+        }
+
+        .hamburger {
+            height: 17px;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+
+            @include media-breakpoint-down(md) {
+                height: 11px;
+            }
+
+            .line {
+                display: block;
+                width: 64px;
+                height: 3px;
+                background-color: $white;
+                transition: all 0.3s ease-in-out;
+
+                @include media-breakpoint-down(md) {
+                    width: 36px;
+                    height: 2px;
+                }
+            }
+        }
+
+        &.open {
+            .hamburger {
+                .line {
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate(5px, 5px);
+
+
+                        @include media-breakpoint-down(md) {
+                            transform: rotate(45deg) translate(5px, 0px);
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        transform: rotate(-45deg) translate(5px, -5px);
+
+                        @include media-breakpoint-down(md) {
+                            transform: rotate(-45deg) translate(6px, -2px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
