@@ -39,37 +39,50 @@ button,
         }
     }
 
-    &.bg-F2F0E5-black-btn{
+    &.bg-F2F0E5-black-btn {
         background-color: $color-F2F0E5;
         border: 1px solid transparent;
         color: $black;
 
-        &:hover{
-           border: 1px solid $color-F2F0E5;
-           background-color: transparent;
+        &:hover {
+            border: 1px solid $color-F2F0E5;
+            background-color: transparent;
         }
     }
 
-    &.border-F2F0E5-btn{
+    &.border-F2F0E5-btn {
         background-color: transparent;
         border: 1px solid $color-F2F0E5;
         color: $color-F2F0E5;
 
-        &:hover{
+        &:hover {
             background-color: $color-F2F0E5;
             color: $black;
         }
     }
 
-    &.border-4371E7-btn{
+    &.border-4371E7-btn {
         background-color: transparent;
         border: 1px solid $color-4371E7;
         color: $color-0F122E;
 
-        &:hover{
+        &:hover {
             background-color: $color-4371E7;
             border: 1px solid transparent;
             color: $color-F2F0E5;
         }
+    }
+
+    &.light-4371E7-text-btn {
+        background-color: $color-F2F0E5;
+        color: $color-4371E7;
+        border: 1px solid transparent;
+
+        &:hover {
+            background-color: transparent;
+            border: 1px solid $color-F2F0E5;
+            color: $color-F2F0E5;
+        }
+
     }
 }

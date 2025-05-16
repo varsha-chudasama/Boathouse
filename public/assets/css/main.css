@@ -17494,6 +17494,12 @@ textarea {
 .row > * {
   padding-inline: 0px;
 }
+.row.row8 {
+  margin-inline: -8px;
+}
+.row.row8 > * {
+  padding-inline: 8px;
+}
 
 .w-fit {
   width: fit-content;
@@ -17805,6 +17811,10 @@ textarea {
   letter-spacing: -0.48;
 }
 
+.radius4 {
+  border-radius: 4px;
+}
+
 .radius5 {
   border-radius: 5px;
 }
@@ -18018,6 +18028,57 @@ button,
   border: 1px solid transparent;
   color: #F2F0E5;
 }
+.btnA.light-4371E7-text-btn {
+  background-color: #F2F0E5;
+  color: #4371E7;
+  border: 1px solid transparent;
+}
+.btnA.light-4371E7-text-btn:hover {
+  background-color: transparent;
+  border: 1px solid #F2F0E5;
+  color: #F2F0E5;
+}
+
+form input {
+  height: 63px;
+}
+form input.light-input {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+form input.light-input::placeholder {
+  color: #F2F0E5;
+  font-family: "barlow-regular";
+  font-size: 16px;
+  line-height: 22px;
+}
+form .light-textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+form .light-textarea::placeholder {
+  color: #F2F0E5;
+  font-family: "barlow-regular";
+  font-size: 16px;
+  line-height: 22px;
+}
+form .checkbox-container .checkmark {
+  height: 28px;
+  width: 28px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+form .checkbox-container input:checked ~ .checkmark {
+  border-color: black !important;
+}
+form .checkbox-container input:checked ~ .checkmark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 7px;
+  height: 16px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+}
 
 .card-hover .img {
   transform: scale(1);
@@ -18085,6 +18146,15 @@ button,
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.social-icon-content .social-bg {
+  height: 45px;
+  width: 45px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.social-icon-content .social-bg .social-icon {
+  width: 18px;
+}
+
 .privacy-section .left-content {
   top: 190px;
 }
@@ -18099,6 +18169,10 @@ button,
 }
 .privacy-section .single-content:first-child {
   padding-top: 0 !important;
+}
+
+.location-section .location-img iframe {
+  height: 696px;
 }
 
 /*# sourceMappingURL=main.css.map */
