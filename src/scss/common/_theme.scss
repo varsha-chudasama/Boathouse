@@ -15,7 +15,16 @@
   &>* {
     padding-inline: 0px;
   }
+
+  &.row8 {
+    margin-inline: -8px;
+
+    &>* {
+      padding-inline: 8px;
+    }
+  }
 }
+
 
 .w-fit {
   width: fit-content;

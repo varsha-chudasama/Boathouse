@@ -1,3 +1,15 @@
 .white-border{
     border-top: 1px solid rgba($color: $white, $alpha: 0.3);
 }
+
+.social-icon-content{
+    .social-bg{
+        height: 45px;
+        width: 45px;
+        background-color: rgba($color: $white, $alpha: 0.3);
+
+        .social-icon{
+            width: 18px;
+        }
+    }
+}
