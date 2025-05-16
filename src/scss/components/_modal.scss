@@ -1,0 +1,59 @@
+.modal {
+    .modal-dialog {
+        @include media-breakpoint-down(lg) {
+            min-width: 100%;
+            margin: 0;
+        }
+
+        .modal-content {
+            @include media-breakpoint-down(lg) {
+                height: 100vh !important;
+                overflow-y: auto;
+            }
+        }
+    }
+
+    &.enquiry-modal {
+        .modal-dialog {
+            min-width: 988px;
+
+            @include media-breakpoint-down(xl) {
+                min-width: 970px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                min-width: 100%;
+                margin: 0;
+            }
+
+            .modal-content {
+                height: 340px;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 0;
+                    height: fit-content !important;
+                    border-radius: 0;
+                }
+
+                .close-div {
+                    height: 47px;
+                    width: 47px;
+                }
+
+                .btn-close {
+                    opacity: 100%;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            .modal-member-content {
+
+                @include media-breakpoint-down(lg) {
+                    padding: 65px 25px 40px;
+                }
+            }
+        }
+    }
+
+}

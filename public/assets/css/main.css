@@ -18088,6 +18088,57 @@ form .checkbox-container input:checked ~ .checkmark::before {
   transform: scale(1.1);
 }
 
+@media (max-width: 991.98px) {
+  .modal .modal-dialog {
+    min-width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .modal .modal-dialog .modal-content {
+    height: 100vh !important;
+    overflow-y: auto;
+  }
+}
+.modal.enquiry-modal .modal-dialog {
+  min-width: 988px;
+}
+@media (max-width: 1199.98px) {
+  .modal.enquiry-modal .modal-dialog {
+    min-width: 970px;
+  }
+}
+@media (max-width: 991.98px) {
+  .modal.enquiry-modal .modal-dialog {
+    min-width: 100%;
+    margin: 0;
+  }
+}
+.modal.enquiry-modal .modal-dialog .modal-content {
+  height: 340px;
+}
+@media (max-width: 991.98px) {
+  .modal.enquiry-modal .modal-dialog .modal-content {
+    padding: 0;
+    height: fit-content !important;
+    border-radius: 0;
+  }
+}
+.modal.enquiry-modal .modal-dialog .modal-content .close-div {
+  height: 47px;
+  width: 47px;
+}
+.modal.enquiry-modal .modal-dialog .modal-content .btn-close {
+  opacity: 100%;
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 991.98px) {
+  .modal.enquiry-modal .modal-dialog .modal-member-content {
+    padding: 65px 25px 40px;
+  }
+}
+
 .header .menu-icon {
   height: 48px;
   width: fit-content;

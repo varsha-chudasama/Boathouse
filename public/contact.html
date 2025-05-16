@@ -19,11 +19,11 @@
         <section class="contact-us dpb-85">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-4">
+                    <div class="col-5 pe-5">
                         <div class="barlow-extrabold font55 space2_75 leading55 text-uppercase text-F2F0E5 dmb-10">
                             LET’S CHAT!
                         </div>
-                        <div class="barlow-regular font16 space0_8 leading22 text-F2F0E5 dmb-35">
+                        <div class="barlow-regular font16 space0_8 leading22 text-F2F0E5 pe-4 dmb-35">
                             We specialise in fantastic pub classics with a twist, the shropshire gold battered haddock
                             fillet is a hit all year round, and the charcoal cooked steaks and burgers are very popular
                             with the locals .
@@ -107,9 +107,12 @@
                                 </label>
                             </div>
                             <div class="d-flex justify-content-center align-items-center">
-                                <button
+                                <!-- <button href="#memberModalToggle" data-bs-toggle="modal"
                                     class="btnA light-4371E7-text-btn font16 space3_2 leading22 text-uppercase radius5 barlow-semibold px-3 d-inline-flex justify-content-center align-items-center text-decoration-none transition">SUBMIT
-                                    FORM</button>
+                                    FORM</button> -->
+                                <a href="#memberModalToggle" data-bs-toggle="modal"
+                                    class="btnA bg-354147-text-btn avenir-heavy font14 leading19 text-white text-decoration-none d-inline-flex justify-content-center align-items-center radius4 text-uppercase transition"
+                                    href="">VIEW GALLERY</a>
                             </div>
                         </form>
                     </div>
@@ -124,6 +127,42 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
+
+        <!-- modal -->
+        <div class="modal enquiry-modal fade text-center" data-bs-backdrop="static" id="memberModalToggle"
+            aria-hidden="true" aria-labelledby="memberModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 radius20 overflow-hidden align-items-center justify-content-center">
+                    <div
+                        class="close-div bg-4371E7 rounded-circle position-absolute top-0 end-0 d-flex align-items-center z-3 justify-content-center mt-4 me-4">
+                        <button type="button"
+                            class="btn-close p-0 close-round d-flex align-items-center justify-content-center"
+                            data-bs-dismiss="modal" aria-label="Close">
+                            <img class="w-100" src="./assets/images/white-close.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="h-100  d-lg-flex align-items-center position-relative">
+                        <div class="modal-member-content text-start w-auto h-100 d-flex align-items-center">
+                            <div class="col-12 mx-auto position-relative">
+                                <div
+                                    class="barlow-extrabold font45 space2_25  leading48 text-uppercase text-4371E7 dmb-20">
+                                    THANKS FOR YOUR ENQUIRY
+                                </div>
+                                <div class="barlow-regular font16 space0_8 leading22 text-0F122E text-center dmb-20">
+                                    We aim to be in touch within 24hrs, but can sometimes take upto 48hrs.
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a class="btnA bg-4371E7-btn font16 space3_2 leading22 text-uppercase radius5 barlow-semibold px-4 d-inline-flex justify-content-center align-items-center text-decoration-none transition"
+                                        href="">
+                                        CLOSE WINDOW
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
