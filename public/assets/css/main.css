@@ -18071,6 +18071,10 @@ button,
   height: 14px;
 }
 
+.white-border {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .hero-section .bg-layer {
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -18090,8 +18094,14 @@ button,
   opacity: 0;
 }
 
-.white-border {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+.curve-blue-image {
+  height: 70px;
+  margin-top: -70px;
+  z-index: 1;
+}
+
+.left-right-pattern-section .left-right-b-pattern {
+  height: 725px;
 }
 
 .privacy-section .left-content {
