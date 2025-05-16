@@ -33,3 +33,47 @@
         height: 725px;
     }
 }
+
+.left-right-section{
+    background-color: $color-4371E7;
+    .left-right-img{
+        height: 500px;
+    }
+    .title,
+    .desc{
+        color: $color-F2F0E5 ;
+    }
+
+    .btnA{
+          background-color: transparent;
+        border: 1px solid $color-F2F0E5;
+        color: $color-F2F0E5;
+
+        &:hover {
+            background-color: $color-F2F0E5;
+            color: $black;
+        }
+    }
+    
+    &.bg-F2F0E5-section{
+        background-color: $color-F2F0E5;
+        .title{
+            color: $color-4371E7 ;
+        }
+        .desc{
+            color: $color-0F122E ;
+        }
+
+        .btnA{
+           background-color: transparent;
+            border: 1px solid $color-4371E7;
+            color: $color-0F122E;
+
+            &:hover {
+                background-color: $color-4371E7;
+                border: 1px solid transparent;
+                color: $color-F2F0E5;
+            }
+        }
+    }    
+}

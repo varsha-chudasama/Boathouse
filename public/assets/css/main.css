@@ -17489,16 +17489,28 @@ textarea {
 }
 
 .row {
-  margin-inline: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .row > * {
-  padding-inline: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .row.row8 {
-  margin-inline: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 .row.row8 > * {
-  padding-inline: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.row.row14 {
+  margin-left: -14px;
+  margin-right: -14px;
+}
+.row.row14 > * {
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .w-fit {
@@ -18088,6 +18100,17 @@ form .checkbox-container input:checked ~ .checkmark::before {
   transform: scale(1.1);
 }
 
+.what-happening-cards {
+  height: 430px;
+}
+.what-happening-cards .card-date {
+  padding: 12px 16px;
+  border-radius: 0px 0px 5px 5px;
+}
+.what-happening-cards .bg-layer {
+  height: 260px;
+}
+
 .offcanvas {
   padding-left: 85px;
   width: 494px !important;
@@ -18111,6 +18134,25 @@ form .checkbox-container input:checked ~ .checkmark::before {
 
 .offcanvas-backdrop.show {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-slider .testimonial-slide .quote-img {
+  height: 120px;
+}
+
+.slick-dots li {
+  border: 2px solid #F2F0E5;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  margin-right: 0px 6px !important;
+  transition: all 0.3s ease-in-out;
+}
+.slick-dots li button {
+  display: none;
+}
+.slick-dots li.slick-active {
+  background-color: #F2F0E5;
 }
 
 .header {
@@ -18172,6 +18214,45 @@ form .checkbox-container input:checked ~ .checkmark::before {
 
 .left-right-pattern-section .left-right-b-pattern {
   height: 725px;
+}
+
+.left-right-section {
+  background-color: #4371E7;
+}
+.left-right-section .left-right-img {
+  height: 500px;
+}
+.left-right-section .title,
+.left-right-section .desc {
+  color: #F2F0E5;
+}
+.left-right-section .btnA {
+  background-color: transparent;
+  border: 1px solid #F2F0E5;
+  color: #F2F0E5;
+}
+.left-right-section .btnA:hover {
+  background-color: #F2F0E5;
+  color: #000;
+}
+.left-right-section.bg-F2F0E5-section {
+  background-color: #F2F0E5;
+}
+.left-right-section.bg-F2F0E5-section .title {
+  color: #4371E7;
+}
+.left-right-section.bg-F2F0E5-section .desc {
+  color: #0F122E;
+}
+.left-right-section.bg-F2F0E5-section .btnA {
+  background-color: transparent;
+  border: 1px solid #4371E7;
+  color: #0F122E;
+}
+.left-right-section.bg-F2F0E5-section .btnA:hover {
+  background-color: #4371E7;
+  border: 1px solid transparent;
+  color: #F2F0E5;
 }
 
 .privacy-section .left-content {
