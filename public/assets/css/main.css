@@ -18332,5 +18332,8 @@ form .checkbox-container input:checked ~ .checkmark::before {
 .news-open-section .left-content .black-arrow {
   width: 6px;
 }
+.news-open-section .gallary-content {
+  height: 563px;
+}
 
 /*# sourceMappingURL=main.css.map */
