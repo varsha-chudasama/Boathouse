@@ -20447,7 +20447,21 @@ var Plugins = /*#__PURE__*/function () {
   }
   return plugins_createClass(Plugins, [{
     key: "init",
-    value: function init() {}
+    value: function init() {
+      this.TestimonialSlider();
+    }
+  }, {
+    key: "TestimonialSlider",
+    value: function TestimonialSlider() {
+      $('.testimonial-slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false
+      });
+    }
   }]);
 }();
 ;// ./src/js/parts/parts.js

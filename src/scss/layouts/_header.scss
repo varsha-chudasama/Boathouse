@@ -1,61 +1,18 @@
-.header {
-    .menu-icon {
-        height: 48px;
-        width: fit-content;
-
-        @include media-breakpoint-down(md) {
-            height: 30px;
+.header{
+    z-index: 999;
+    .header-btn{
+        height: 85px;
+        .header-table-btn{
+            border-radius: 0px 0px 0px 5px;
+            padding-left: 30px;
+            padding-right: 30px;
         }
 
-        @include media-breakpoint-down(lg) {
-            &:focus-visible {
-                outline: none !important;
-            }
-        }
-
-        .hamburger {
-            height: 17px;
-            position: relative;
-            transition: all 0.3s ease-in-out;
-
-            @include media-breakpoint-down(md) {
-                height: 11px;
-            }
-
-            .line {
-                display: block;
-                width: 64px;
-                height: 3px;
-                background-color: $white;
-                transition: all 0.3s ease-in-out;
-
-                @include media-breakpoint-down(md) {
-                    width: 36px;
-                    height: 2px;
-                }
-            }
-        }
-
-        &.open {
-            .hamburger {
-                .line {
-                    &:nth-child(1) {
-                        transform: rotate(45deg) translate(5px, 5px);
-
-
-                        @include media-breakpoint-down(md) {
-                            transform: rotate(45deg) translate(5px, 0px);
-                        }
-                    }
-
-                    &:nth-child(2) {
-                        transform: rotate(-45deg) translate(5px, -5px);
-
-                        @include media-breakpoint-down(md) {
-                            transform: rotate(-45deg) translate(6px, -2px);
-                        }
-                    }
-                }
+        .burger-menu{
+            background-color: $color-0F122E;
+            width: 90px;
+            img{
+                height: 14px;
             }
         }
     }
