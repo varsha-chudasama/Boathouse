@@ -1,0 +1,28 @@
+.offcanvas{
+    padding-left: 85px;
+    width: 494px !important;
+    .btn-close{
+        margin-top: 25px;
+        margin-right: 25px;
+        height: 20px;
+        width: 20px;
+        opacity: 100%;
+    }
+
+    .header-btn{
+        height: 75px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: $radius5;
+    }
+
+    .menu-li{
+        &:last-child{
+            margin-bottom: 0px !important;
+        }
+    }
+}
+
+.offcanvas-backdrop.show{
+    background-color: rgba($color: $black, $alpha: 0.3);
+}

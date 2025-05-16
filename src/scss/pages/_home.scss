@@ -1,0 +1,23 @@
+.hero-section{
+    .bg-layer {
+        background-color: rgba($color: $black, $alpha: 0.3);
+    }
+    .hero-logo{
+        height: 165px;
+    }
+    .header-menu-logo{
+        height: 103px;
+        .hover-image{
+           opacity: 0;
+        }
+
+        &:hover{
+            .hover-image{
+                opacity: 1;
+            }
+            .default-image{
+               opacity: 0;
+            }
+        }
+    }
+}
