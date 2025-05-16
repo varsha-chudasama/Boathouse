@@ -7,11 +7,69 @@ button,
     -webkit-appearance: none !important;
 }
 
-.btnA{
-    &.header-btn{
+.btnA {
+    height: 75px;
+
+    &.header-btn {
         height: 85px;
-
         background-color: $color-F2F0E5;
+    }
 
+    &.bg-4371E7-btn {
+        background-color: $color-4371E7;
+        border: 1px solid transparent;
+        color: $color-F2F0E5;
+
+        &:hover {
+            border: 1px solid $color-4371E7;
+            background-color: transparent;
+            color: $color-4371E7;
+        }
+    }
+
+    &.bg-F2F0E5-btn {
+        background-color: $color-F2F0E5;
+        border: 1px solid transparent;
+        color: $color-4371E7;
+
+        &:hover {
+            border: 1px solid $color-4371E7;
+            background-color: transparent;
+            color: $color-4371E7;
+        }
+    }
+
+    &.bg-F2F0E5-black-btn{
+        background-color: $color-F2F0E5;
+        border: 1px solid transparent;
+        color: $black;
+
+        &:hover{
+           border: 1px solid $color-F2F0E5;
+           background-color: transparent;
+        }
+    }
+
+    &.border-F2F0E5-btn{
+        background-color: transparent;
+        border: 1px solid $color-F2F0E5;
+        color: $color-F2F0E5;
+
+        &:hover{
+            background-color: $color-F2F0E5;
+            color: $black;
+        }
+    }
+
+    &.border-4371E7-btn{
+        background-color: transparent;
+        border: 1px solid $color-4371E7;
+        color: $color-0F122E;
+
+        &:hover{
+            background-color: $color-4371E7;
+            border: 1px solid transparent;
+            color: $color-F2F0E5;
+        }
     }
 }
