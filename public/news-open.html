@@ -80,21 +80,35 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 gallary-content position-relative">
+                        <div class="col-12 gallary-content position-relative video-container">
                             <div class="video-img h-100 position-relative">
                                 <div class="video h-100">
-                                    <video class="w-100 h-100 object-cover play-video" id="pause-video">
+                                    <video class="w-100 h-100 object-cover myVideo">
                                         <source src="assets/video/video.mp4" type="video/mp4" />
-                                        <source src="assets/video/video.mp4" type="video/ogg" />
                                         Your browser does not support the video tag.
                                     </video>
-                                    <button onclick="playVid()"
-                                        class="border-0 bg-transparent video-icon play-icon position-absolute top-left-center">
-                                        <img src="assets/icon/play-icon.svg" alt="">
-                                    </button>
+
+                                    <!-- Play Button -->
+                                     <div class="video-play-bg cursor-pointer d-flex justify-content-center align-items-center position-absolute top-left-center bg-F2F0E5">
+                                         <button type="button"
+                                             class="border-0 bg-transparent video-icon z-3 play-video-modal">
+                                             <img src="assets/images/play-btn.svg" alt="Play">
+                                         </button>
+                                     </div>
+
+                                    <!-- Preview Overlay (can be hidden initially if needed) -->
+                                    <div class="play-video-preview position-absolute top-0 start-0 w-100 h-100"></div>
+
+                                    <!-- Close Button -->
+                                    <!-- <button type="button"
+                                        class="border-0 bg-transparent close-video-modal position-absolute top-left-center">
+                                        <img src="assets/images/close-btn.svg" alt="Close">
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>
