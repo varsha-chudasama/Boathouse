@@ -20449,11 +20449,24 @@ var Plugins = /*#__PURE__*/function () {
     key: "init",
     value: function init() {
       this.TestimonialSlider();
+      this.AboutSlider();
     }
   }, {
     key: "TestimonialSlider",
     value: function TestimonialSlider() {
       $('.testimonial-slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false
+      });
+    }
+  }, {
+    key: "AboutSlider",
+    value: function AboutSlider() {
+      $('.about-hero-slider').slick({
         dots: true,
         infinite: false,
         speed: 300,
@@ -20477,7 +20490,16 @@ var Parts = /*#__PURE__*/function () {
   }
   return parts_createClass(Parts, [{
     key: "init",
-    value: function init() {}
+    value: function init() {
+      this.BottomLine();
+    }
+  }, {
+    key: "BottomLine",
+    value: function BottomLine() {
+      $('.close-icon').on('click', function () {
+        $('.bottom-line').addClass('d-none');
+      });
+    }
   }]);
 }();
 ;// ./src/js/parts/truncate.js
