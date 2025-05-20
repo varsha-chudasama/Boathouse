@@ -5,27 +5,58 @@ export class Plugins {
   init() {
     this.TestimonialSlider();
     this.AboutSlider();
+    this.HappeningSlider();
   }
 
-  TestimonialSlider(){
+  TestimonialSlider() {
     $('.testimonial-slider').slick({
       dots: true,
       infinite: false,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows:false,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            slidesToShow: 1,
+          },
+        },
+      ],
     });
   }
 
-  AboutSlider(){
+  AboutSlider() {
     $('.about-hero-slider').slick({
       dots: true,
       infinite: false,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows:false,
+      arrows: false,
+      fade: true,
+    });
+  }
+
+  HappeningSlider() {
+   $('.happening-slider').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            slidesToShow: 1,
+          },
+        },
+      ],
     });
   }
 

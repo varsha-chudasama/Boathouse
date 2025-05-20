@@ -20450,6 +20450,7 @@ var Plugins = /*#__PURE__*/function () {
     value: function init() {
       this.TestimonialSlider();
       this.AboutSlider();
+      this.HappeningSlider();
     }
   }, {
     key: "TestimonialSlider",
@@ -20460,7 +20461,14 @@ var Plugins = /*#__PURE__*/function () {
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false
+        arrows: false,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            slidesToShow: 1
+          }
+        }]
       });
     }
   }, {
@@ -20472,7 +20480,27 @@ var Plugins = /*#__PURE__*/function () {
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false
+        arrows: false,
+        fade: true
+      });
+    }
+  }, {
+    key: "HappeningSlider",
+    value: function HappeningSlider() {
+      $('.HappeningSlider').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 3
+          }
+        }]
       });
     }
   }]);

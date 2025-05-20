@@ -11,13 +11,28 @@
     }
 }
 
-.what-happening-cards{
+.what-happening-cards {
     height: 430px;
-    .card-date{
+
+    .card-date {
         padding: 12px 16px;
         border-radius: 0px 0px 5px 5px;
     }
-    .bg-layer{
+
+    .bg-layer {
         height: 260px;
     }
+
+    @include media-breakpoint-down(lg){
+        height: 300px;
+    }
+}
+
+.menu-card {
+    height: 517px;
+
+    .linear-gradiant {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(32, 30, 33, 0));
+    }
+
 }

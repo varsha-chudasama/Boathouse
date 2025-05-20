@@ -1,10 +1,9 @@
-export class Video{
-    init(){
+export class Video {
+    init() {
         this.Video();
         this.Vimeo();
         this.Youtube();
     }
-
     Video() {
         $(document).ready(function () {
             // Play specific video and pause all others

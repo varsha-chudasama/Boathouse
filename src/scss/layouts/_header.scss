@@ -1,18 +1,33 @@
-.header{
+.header {
     z-index: 999;
-    .header-btn{
+
+    .header-btn {
         height: 85px;
-        .header-table-btn{
+
+        @include media-breakpoint-down(lg){
+            height: 70px;
+        }
+
+        .header-table-btn {
             border-radius: 0px 0px 0px 5px;
             padding-left: 30px;
             padding-right: 30px;
         }
 
-        .burger-menu{
+        .burger-menu {
             background-color: $color-0F122E;
             width: 90px;
-            img{
+
+            @include media-breakpoint-down(lg) {
+                width: 70px;
+            }
+
+            img {
                 height: 14px;
+
+                @include media-breakpoint-down(lg){
+                    height: 22px;
+                }
             }
         }
     }

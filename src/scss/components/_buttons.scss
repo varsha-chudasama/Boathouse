@@ -27,6 +27,17 @@ button,
         }
     }
 
+    &.bg-4371E7-white-btn {
+        background-color: $color-4371E7;
+        border: 1px solid transparent;
+        color: $color-F2F0E5;
+
+        &:hover {
+            border: 1px solid $color-F2F0E5;
+            background-color: transparent;
+        }
+    }
+
     &.bg-F2F0E5-btn {
         background-color: $color-F2F0E5;
         border: 1px solid transparent;

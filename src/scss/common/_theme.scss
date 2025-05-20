@@ -4,8 +4,8 @@
   padding-right: 85px;
 
   @include media-breakpoint-down(lg) {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -25,6 +25,16 @@
     &>* {
       padding-left: 8px;
       padding-right: 8px;
+    }
+  }
+
+  &.row12 {
+    margin-left: -12px;
+    margin-right: -12px;
+
+    &>* {
+      padding-left: 12px;
+      padding-right: 12px;
     }
   }
 

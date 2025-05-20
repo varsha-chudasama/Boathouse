@@ -14,6 +14,24 @@ form {
 
         }
 
+        &.dark-input {
+            height: 75px;
+            background-color: rgba($color: $color-80BAFF, $alpha: 0.2);
+
+            &::placeholder {
+                color: $color-F2F0E5;
+                font-family: "barlowsemicondensed-bold";
+                font-size: $font16;
+                letter-spacing: $space3_2;
+                line-height: $leading66;
+
+            }
+
+            @include media-breakpoint-down(lg){
+                height: 60px;
+            }
+        }
+
     }
 
     .light-textarea {

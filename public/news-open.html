@@ -19,7 +19,7 @@
         <section class="news-open-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-2 left-content d-flex justify-content-between flex-column">
+                    <div class="col-2 left-content position-sticky d-flex justify-content-between flex-column">
                         <div class="d-flex align-items-center">
                             <div class="black-arrow">
                                 <img class="w-100" src="assets/images/black-arrow.svg" alt="black-arrow">
@@ -30,8 +30,28 @@
                             </a>
                         </div>
                         <div class="">
-                            <div class="">
+                            <div class="barlow-regular font16 leading24 text-404040 opacity-50 dmb-20">
                                 Share Post
+                            </div>
+                            <div class="social-icon-content left-icon-content d-flex">
+                                <div
+                                    class="social-bg d-flex justify-content-center align-items-center border-10122E rounded-pill me-2">
+                                    <a class="social-icon d-flex justify-content-center" href="">
+                                        <img class="h-100" src="./assets/images/Facebook.svg" alt="Facebook-icon">
+                                    </a>
+                                </div>
+                                <div
+                                    class="social-bg d-flex justify-content-center align-items-center border-10122E rounded-pill me-2">
+                                    <a class="social-icon d-flex justify-content-center" href="">
+                                        <img class="h-100" src="./assets/images/LinkedIn.svg" alt="LinkedIn-icon">
+                                    </a>
+                                </div>
+                                <div
+                                    class="social-bg d-flex justify-content-center align-items-center border-10122E rounded-pill me-2">
+                                    <a class="social-icon d-flex justify-content-center" href="">
+                                        <img class="h-100" src="./assets/images/Facebook.svg" alt="Facebook-icon">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -80,35 +100,121 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 gallary-content position-relative video-container">
-                            <div class="video-img h-100 position-relative">
-                                <div class="video h-100">
-                                    <video class="w-100 h-100 object-cover myVideo">
-                                        <source src="assets/video/video.mp4" type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
 
-                                    <!-- Play Button -->
-                                     <div class="video-play-bg cursor-pointer d-flex justify-content-center align-items-center position-absolute top-left-center bg-F2F0E5">
-                                         <button type="button"
-                                             class="border-0 bg-transparent video-icon z-3 play-video-modal">
-                                             <img src="assets/images/play-btn.svg" alt="Play">
-                                         </button>
-                                     </div>
+                        <div class="image-banner col-12 position-relative overflow-h idden dmb-65">
+                            <div class="banner-img position-relative overflow-hidden video-img-play w-100 dmb-25">
+                                <!-- img -->
+                                <!-- <img src="assets/images/hero-section.png" class="w-100 h-100 object-cover" alt=""> -->
+                                <!-- <div class="video-preview w-100 h-100">
+                                    <img src="assets/images/hero-2.png" class="w-100 h-100 object-cover" alt="">
+                                </div> -->
 
-                                    <!-- Preview Overlay (can be hidden initially if needed) -->
-                                    <div class="play-video-preview position-absolute top-0 start-0 w-100 h-100"></div>
+                                <!-- =============== video ================  -->
+                                <!-- <video muted loop class="w-100 h-100 object-cover" id="banner-video">
+                                    <source src="assets/video/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-buttons position-absolute top-left-center h-auto">
+                                    <button class="p-0 bg-transparent border-0 play-video" id="play-banner-video">
+                                        <img src="assets/images/play-btn.svg" class="w-100 h-100 object-cover" alt="">
+                                    </button>
+                                    <button class="p-0 bg-transparent border-0 d-none pause-video"
+                                        id="pause-banner-video">
+                                        <img src="assets/images/pause.svg" class="w-100 h-100 object-cover" alt="">
+                                    </button>
+                                </div> -->
 
-                                    <!-- Close Button -->
-                                    <!-- <button type="button"
-                                        class="border-0 bg-transparent close-video-modal position-absolute top-left-center">
-                                        <img src="assets/images/close-btn.svg" alt="Close">
-                                    </button> -->
+                                <!-- =============== youtube-video ================  -->
+                                <!-- <div class="main-youtube-video h-100 w-100 radius5"> -->
+                                <!-- <div class="youtube-video-iframe h-100 w-100 position-relative transition"> -->
+                                <div class="video w-100 h-100" data-video-id="ix6pVdZ5Ynk">
+                                    <div class="video-preview radius5"
+                                        style="background-image:url('../public/assets/images/right-image.png');">
+                                        <div
+                                            class="position-absolute text-white top-left-center z-3 cursor-pointer h-auto">
+                                            <div
+                                                class="play-video play-iframe-btn play -video play- bg bg-F2F0E5 rounded-pill d-flex justify-content-center align-items-center cursor-pointer">
+                                    <div class="play-video"></div>
+                                                <!-- <button class="p-0 bg-transparent border-0 play-video ">
+                                                    <img src="assets/images/play-btn.svg"
+                                                        class="w-100 h-100 object-cover" alt="">
+                                                </button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-layer h-100 w-100">
+                                        <div class="video-placeholder h-100 w-100">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- vimeo -->
+                                <!-- <div id="video1" class="w-100 h-100 vimeo-video-iframe" data-video-id="68771045">
+                                    <div
+                                        class="vimeo-frame position-relative w-100 h-100 radius5 res-radius-0 overflow-hidden">
+                                        <img src="assets/images/hero-2.png"
+                                            class="w-100 h-100 object-cover cover-images"/>
+                                        <div class="position-absolute text-white top-left-center z-3 h-auto">
+                                            <div class="play-vimeo-btn play-video play-bg bg-F2F0E5 rounded-pill d-flex justify-content-center align-items-center cursor-pointer">
+                                                <button class="p-0 bg-transparent border-0">
+                                                    <img src="assets/images/play-btn.svg" class="w-100 h-100 object-cover"
+                                                        alt="">
+                                                </button>
+                                            </div>
+                                            <button
+                                                class="p-0 bg-transparent border-0 d-none pause-vimeo-btn pause-video">
+                                                <img src="assets/images/video-pause-button.svg" class="w-100 h-100 object-cover"
+                                                    alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                            <div class="banner-img">
+                                <div class="row row12 h-100">
+                                    <div class="col-6 h-100">
+                                        <div class="banner-inner-img radius10 overflow-hidden h-100">
+                                            <img class="w-100 h-100 object-cover" src="./assets/images/right-image.png"
+                                                alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 h-100">
+                                        <div class="banner-inner-img radius10 overflow-hidden h-100">
+                                            <img class="w-100 h-100 object-cover" src="./assets/images/right-image.png"
+                                                alt="image">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-
+                        <div class="col-10 pe-5">
+                            <div class="barlow-extrabold font45 space2_25 leading45 text-uppercase text-4371E7 dmb-20">
+                                SUB TITLE
+                            </div>
+                            <div class="barlow-regular font16 leading22 text-0F122E dmb-20">
+                                The boatshed is the private party room for the boathouse, it is right on the water’s
+                                edge on the banks of the River Severn. Big enough for seating 28 guests inside and more
+                                out on the terrace it’s great for birthday parties, christenings, friends’ get
+                                togethers, or any excuse for a party you can think of.
+                            </div>
+                            <div class="barlow-regular font16 leading22 text-0F122E dmb-20">
+                                The boatshed has its own buffet
+                                style menu, this changes seasonally + can be tweaked to suit the occasion.
+                            </div>
+                            <div class="barlow-regular font16 leading22 text-0F122E dmb-20">
+                                The boatshed
+                                is the private party room for the boathouse, it is right on the water’s edge on the
+                                banks of the River Severn. Big enough for seating 28 guests inside and more out on the
+                                terrace it’s great for birthday parties, christenings, friends’ get togethers, or any
+                                excuse for a party you can think of.
+                            </div>
+                            <div class="barlow-regular font16 leading22 text-0F122E dmb-20">
+                                The boatshed has its own buffet style menu, this
+                                changes seasonally + can be tweaked to suit the occasion.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
