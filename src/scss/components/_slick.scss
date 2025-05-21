@@ -28,6 +28,18 @@
 }
 
 .about-hero-slider {
+    .slick-list {
+        height: 100%;
+
+        .slick-track {
+            height: 100%;
+
+            .slick-slide > div {
+                height: 100%;
+            }
+        }
+    }
+
     .slick-dots {
         bottom: 120px;
 
@@ -50,7 +62,7 @@
     }
 }
 
-.HappeningSlider {
+.happening-slider {
     .slick-list {
         margin-left: -14px;
         margin-right: -14px;

@@ -35,4 +35,8 @@
         background: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(32, 30, 33, 0));
     }
 
+    @include media-breakpoint-down(lg){
+        height: 300px;
+    }
+
 }

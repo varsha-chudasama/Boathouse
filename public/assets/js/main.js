@@ -20487,8 +20487,8 @@ var Plugins = /*#__PURE__*/function () {
   }, {
     key: "HappeningSlider",
     value: function HappeningSlider() {
-      $('.HappeningSlider').slick({
-        dots: false,
+      $('.happening-slider').slick({
+        dots: true,
         infinite: false,
         speed: 300,
         slidesToShow: 3,
@@ -20497,8 +20497,8 @@ var Plugins = /*#__PURE__*/function () {
         responsive: [{
           breakpoint: 768,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 3
+            arrows: false,
+            slidesToShow: 1
           }
         }]
       });
@@ -20859,7 +20859,51 @@ var Video = /*#__PURE__*/function () {
     }
   }]);
 }();
+;// ./src/js/parts/header.js
+function header_typeof(o) { "@babel/helpers - typeof"; return header_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, header_typeof(o); }
+function header_classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function header_defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, header_toPropertyKey(o.key), o); } }
+function header_createClass(e, r, t) { return r && header_defineProperties(e.prototype, r), t && header_defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function header_toPropertyKey(t) { var i = header_toPrimitive(t, "string"); return "symbol" == header_typeof(i) ? i : i + ""; }
+function header_toPrimitive(t, r) { if ("object" != header_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != header_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var Header = /*#__PURE__*/function () {
+  function Header() {
+    header_classCallCheck(this, Header);
+  }
+  return header_createClass(Header, [{
+    key: "init",
+    value: function init() {
+      this.HeaderFixed();
+    }
+  }, {
+    key: "HeaderFixed",
+    value: function HeaderFixed() {
+      // header fixed js
+      $(document).ready(function () {
+        var prevScrollPos = $(window).scrollTop();
+        $(window).scroll(function () {
+          var sticky = $(".header"),
+            scroll = $(window).scrollTop();
+          if (scroll >= 50) {
+            sticky.addClass("header-fixed");
+            sticky.removeClass("header-fixed-os");
+          } else {
+            sticky.removeClass("header-fixed");
+            sticky.addClass("header-fixed-os");
+          }
+          if (prevScrollPos > scroll || scroll === 0) {
+            $(".header").removeClass("hidden");
+          } else {
+            $(".header").addClass("hidden");
+          }
+          prevScrollPos = scroll;
+        });
+      });
+    }
+  }]);
+}();
 ;// ./src/js/main.js
+
 
 
 
@@ -20899,6 +20943,8 @@ jquery_default()(function () {
   window.privacy.init();
   window.video = new Video();
   window.video.init();
+  window.header = new Header();
+  window.header.init();
 });
 
 // ===========================================================================

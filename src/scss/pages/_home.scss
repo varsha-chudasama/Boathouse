@@ -43,13 +43,13 @@
     margin-top: -70px;
     z-index: 1;
 
-    img{
+    img {
         @include media-breakpoint-down(lg) {
+            height: 100%;
             object-fit: cover;
             object-position: center;
         }
     }
-
 }
 
 .left-right-pattern-section {
@@ -117,6 +117,10 @@
 .right-image-section {
     .right-img {
         height: 502px;
+
+        @include media-breakpoint-down(lg) {
+            height: 345px;
+        }
     }
 }
 
