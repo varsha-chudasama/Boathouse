@@ -14,7 +14,7 @@ export class Video {
                 $('.myVideo').each(function () {
                     this.pause();
                     $(this).closest('.video-container').find('.play-video-modal').removeClass('d-none');
-                    $(this).closest('.video-container').find('.play-video-preview').removeClass('d-none');
+                    $(this).closest('.video-container'  ).find('.play-video-preview').removeClass('d-none');
                 });
 
                 // Play clicked video

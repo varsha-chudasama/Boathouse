@@ -18701,6 +18701,14 @@ form .checkbox-container input:checked ~ .checkmark::before {
     height: 265px;
   }
 }
+.image-banner .banner-block-img:nth-child(n+3) {
+  height: 563px;
+}
+@media (max-width: 991.98px) {
+  .image-banner .banner-block-img:nth-child(n+3) {
+    height: 265px;
+  }
+}
 
 .video-img-pause:hover #pause-ban ner-video {
   display: flex !important;

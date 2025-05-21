@@ -31,6 +31,14 @@
                 height: 265px;
             }
         }
+
+        &:nth-child(n+3) {
+            height: 563px;
+
+            @include media-breakpoint-down(lg) {
+                height: 265px;
+            }
+        }
     }
 }
 
