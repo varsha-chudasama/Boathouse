@@ -4330,6 +4330,11 @@ wildcard@^2.0.0:
   resolved "https://registry.yarnpkg.com/wildcard/-/wildcard-2.0.1.tgz#5ab10d02487198954836b6349f74fff961e10f67"
   integrity sha512-CC1bOL87PIWSBhDcTrdeLo6eGT7mCFtrg0uIJtqJUFyK+eJnzl8A1niH56uu7KMa5XFrtiV+AQuHO3n7DsHnLQ==
 
+wow@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/wow/-/wow-0.0.7.tgz#76e50e8dd745fbcee2e4f2163ced63969346b67c"
+  integrity sha512-k7iYeimbocGFQW1p4YWGJzK131OVqRqFqvmr+YS5Wa9sUmorL96t6qxayFq0d5jBNCHcrQKwng5ZiIn4ruG0fA==
+
 wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"

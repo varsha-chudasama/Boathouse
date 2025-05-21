@@ -90,7 +90,8 @@
         }
 
         @include media-breakpoint-down(lg) {
-            background-color: transparent!important;
+            background-color: transparent !important;
+
             .header-fixed {
                 background-color: transparent !important;
             }
@@ -105,6 +106,23 @@
 
     @include media-breakpoint-down(lg) {
         background-color: $color-F2F0E5;
+    }
+
+    &.header-fixed-os {
+
+        @include media-breakpoint-down(lg) {
+            background-color: transparent !important;
+
+            .header-logo {
+                .black-logo {
+                    display: none !important;
+                }
+
+                .white-logo {
+                    display: block !important;
+                }
+            }
+        }
     }
 
 }
